@@ -1,0 +1,36 @@
+﻿@using DI.Controllers;
+@using DI.MyClasses;
+@using DI.Helpers;
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+    PhoneNumbers line = (PhoneNumbers)ViewBag.line;
+}
+@section header{
+    <h1>
+        Delete
+    </h1>
+}
+<!DOCTYPE html>
+
+<html>
+<body>
+    <div>
+        <h3>Удаление записи:</h3>
+        @Html.DeleteForm(line)
+        @*<form action="@DictController.path/Dict/DeleteSave?id=@line.id" method="post">
+                <h4>
+                    Вы действительно хотите удалить следующую запись?
+                </h4>
+                <table border="1">
+                    <tr>
+                        <td>@line.surname</td>
+                        <td>@line.number</td>
+                    </tr>
+                </table>
+                <br />
+                <input type="submit" name="press" value="Да" size="20">
+                <input type="submit" name="press" value="Нет" size="20">
+            </form>*@
+    </div>
+</body>
+</html>

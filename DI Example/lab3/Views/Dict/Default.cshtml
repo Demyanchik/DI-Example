@@ -1,0 +1,16 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+    HttpRequestBase request = ViewBag.request;
+}
+
+<!DOCTYPE html>
+
+<html>
+<body>
+    <div>
+        <h1>
+            @request.HttpMethod: @request.Url не поддерживается
+        </h1>
+    </div>
+</body>
+</html>

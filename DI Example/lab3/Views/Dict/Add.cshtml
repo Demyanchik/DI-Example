@@ -1,0 +1,38 @@
+﻿@using DI.Controllers;
+@using DI.Helpers;
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section header{
+    <h1>
+        Add
+    </h1>
+}
+<!DOCTYPE html>
+
+<html>
+<body>
+    <div>
+        <h3>Добавление записи:</h3>
+        @Html.AddForm()
+
+        @*Было*@
+        @*<form action="@DictController.path/Dict/AddSave" method="post">
+                <table>
+                    <tr>
+                        <td><label for="surname">Фамилия:</label> </td>
+                        <td> <input type="text" name="surname" size="20"> </td>
+                    </tr>
+                    <tr>
+                        <td><label for="number">Телефон:</label></td>
+                        <td><input type="text" name="number" size="20"></td>
+                    </tr>
+                </table>
+                <br>
+                <input type="submit" name="press" value="Добавить" size="20">
+                <input type="submit" name="press" value="Отмена" size="20">
+            </form>*@
+    </div>
+</body>
+</html>

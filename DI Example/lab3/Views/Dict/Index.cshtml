@@ -1,0 +1,29 @@
+﻿@using DI.Controllers;
+@using DI.MyClasses;
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+    List<PhoneNumbers> data = ViewBag.data;
+    //Layout = null;
+}
+@section header{
+    <h1>
+        Index
+    </h1>
+    }
+<!DOCTYPE html>
+
+<html>
+<body>
+    <div>
+        <h3>Телефоны:</h3>
+        <table border="1">
+            @foreach (PhoneNumbers el in data)
+            {
+                @Html.Partial("LineView", el);
+            }
+        </table>
+        <br />
+        <a href="@DictController.path/Dict/Add">Добавить запись</a>
+    </div>
+</body>
+</html>

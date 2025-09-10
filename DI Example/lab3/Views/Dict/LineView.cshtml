@@ -1,0 +1,14 @@
+﻿@using DI.Controllers;
+
+@model DI.MyClasses.PhoneNumbers
+
+<tr>
+    <td>@Model.surname</td>
+    <td>@Model.number</td>
+    <td>
+        <a href="@DictController.path/Dict/Update?id=@Model.id">Изменить</a>
+    </td>
+    <td>
+        <a href="@DictController.path/Dict/Delete?id=@Model.id">Удалить</a>
+    </td>
+</tr>

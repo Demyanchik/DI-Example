@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>lab6</title>
+    <style>
+        footer {
+            position: fixed; /* Фиксированное положение */
+            left: 0;
+            bottom: 0; /* Левый нижний угол */
+            padding: 10px; /* Поля вокруг текста */
+            background: gray; /* Цвет фона */
+            color: #fff; /* Цвет текста */
+            width: 100%; /* Ширина слоя */
+        }
+        td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        @RenderSection("header", false)
+    </header>
+    @RenderBody()
+    <footer>
+        <p>lab 6. Все права защищены.</p>
+    </footer>
+</body>
+</html>
